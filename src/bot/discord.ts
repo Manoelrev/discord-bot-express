@@ -86,7 +86,10 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
 
     jsonArray.push(JSON.stringify(data))
     
-    const msg = { content: 'Erro ao executar o comando!', ephemeral: true };
+    const msg = {
+      content: '⚠️ Ocorreu um erro ao executar este comando. Tente novamente mais tarde.',
+      ephemeral: true
+    };
 
     if (interaction.replied || interaction.deferred) {await interaction.followUp(msg);} 
     else { await interaction.reply(msg);}
