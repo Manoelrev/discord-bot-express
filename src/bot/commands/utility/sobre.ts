@@ -1,6 +1,6 @@
 import { SlashCommandBuilder, CommandInteraction, EmbedBuilder } from 'discord.js';
-const { name, version, author, description } = require('../../../package.json');
-import { Command } from '../../types/command';
+import {name, version, author, description } from '../../../../package.json';
+import { Command } from '../../../shared/types/command';
 
 const command: Command = {
   data: new SlashCommandBuilder()

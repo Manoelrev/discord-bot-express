@@ -1,6 +1,6 @@
 import 'dotenv/config';
-import client from './src/discord';
-import server from './src/express';
+import client from './src/bot/discord';
+import server from './src/api/express';
 
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN
 const PORT = process.env.PORT || 3000;
