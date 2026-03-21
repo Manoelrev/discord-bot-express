@@ -3,6 +3,7 @@ import path from 'node:path';
 import { Client,Collection, Events, GatewayIntentBits, Interaction } from 'discord.js';
 import {dataError, dataCommand, jsonArray} from '../shared/types/commandData'
 import { Command } from '../shared/types/command';
+import { writeData } from '../shared/persistance';
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection<string, Command>();
@@ -73,7 +74,7 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
       createAt: interaction.createdAt
     };
 
-    jsonArray.push(JSON.stringify(data))
+    writeData(JSON.stringify(data))
 
 
   } 
@@ -84,7 +85,7 @@ client.on(Events.InteractionCreate, async (interaction: Interaction) => {
       createAt: new Date()
     } 
 
-    jsonArray.push(JSON.stringify(data))
+    writeData(JSON.stringify(data))
     
     const msg = {
       content: '⚠️ Ocorreu um erro ao executar este comando. Tente novamente mais tarde.',
