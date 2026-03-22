@@ -165,6 +165,7 @@ Após a configuração do .env você pode executar a aplicação com os comandos
 ## 🖼️ Imagens & Screenshots
 
 - Discord
+
 ![Comando ajuda](https://github.com/user-attachments/assets/64ed45c0-e5c4-433f-b4fd-e6ad46701248)
 
 ![Comando moeda](https://github.com/user-attachments/assets/e888ff8d-2864-4979-bf6e-78ba2ace3095)
