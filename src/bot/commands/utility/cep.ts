@@ -6,7 +6,7 @@ const command: Command = {
   data: new SlashCommandBuilder()
     .setName('cep')
     .setDescription('consulta CEP')
-    .addStringOption(option =>  option.setName("cepnumber").setDescription("Numero de cep").setRequired(true)),
+    .addStringOption(option =>  option.setName("cep").setDescription("Numero de cep").setRequired(true)),
 
   async execute(interaction: CommandInteraction): Promise<void> {
     if (!interaction.isChatInputCommand()) return;
