@@ -1,4 +1,3 @@
-
 # 🤖 discord-bot-express
 
 Este é um bot desenvolvido para o Discord com o objetivo de responder comandos basicos, e tendo integração com com servidores para monitoramento do bot.
@@ -44,6 +43,8 @@ discord-bot-express/
     │   │       ├── 📄 ajuda.ts
     │   │       ├── 📄 hora.ts
     │   │       ├── 📄 ping.ts
+    │   │       ├── 📄 cep.ts
+    │   │       ├── 📄 moeda.ts
     │   │       └── 📄 sobre.ts
     │   │
     │   └── deploy/
@@ -51,8 +52,13 @@ discord-bot-express/
     │       └── 📄 deploy-command-dev.ts
     │
     └── shared/
+        ├── 📄 persistance.ts
+        │
         └── types/
             ├── 📄 command.ts
+            ├── 📄 commandData.ts
+            ├── 📄 Moeda.ts
+            ├── 📄 cep.ts
             └── 📄 commandData.ts
 ```
 ## 🌐 Instalação
@@ -73,14 +79,14 @@ Instale as dependencias com:
 
 ## 📌 Como iniciar o projeto
 
-. Para rodar o projeto primeiramente é necessario criar um bot no site [Portal do desenvolvedor do Discord](https://discord.com/developers/applications)
+- Para rodar o projeto primeiramente é necessario criar um bot no site [Portal do desenvolvedor do Discord](https://discord.com/developers/applications)
 
-. Crie uma nova aplicação
+- Crie uma nova aplicação
 Clique em "New Application"
 Escolha um nome para o seu bot
 Clique em "Create"
 
-. Adicione um bot à aplicação
+- Adicione um bot à aplicação
 Vá até a aba "Bot"
 Clique em "Add Bot"
 Confirme a criação
@@ -151,11 +157,22 @@ Após a configuração do .env você pode executar a aplicação com os comandos
 #### Rotas Express
 
 ```
-    GET http://localhost:3000/
-    GET http://localhost:3000/health
-    GET http://localhost:3000/logs
+    GET /
+    GET /health
+    GET /logs
 ```
 
 ## 🖼️ Imagens & Screenshots
 
+- Discord
+![Comando ajuda](https://github.com/user-attachments/assets/64ed45c0-e5c4-433f-b4fd-e6ad46701248)
 
+![Comando moeda](https://github.com/user-attachments/assets/e888ff8d-2864-4979-bf6e-78ba2ace3095)
+
+![Comando sobre](https://github.com/user-attachments/assets/c0376940-8c96-4292-b88b-0f117c6fb757)
+
+- Express
+
+![Pagina Health](https://github.com/user-attachments/assets/288de971-1fdb-497f-b43e-540e5cf42dcb)
+
+![Pagina logs](https://github.com/user-attachments/assets/6739007e-10fd-4b9b-be1b-666dac1ccbf0)
